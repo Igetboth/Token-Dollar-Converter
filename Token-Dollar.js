@@ -26,7 +26,7 @@ function tokensToDollars() {
 	
 	var link = document.createElement("a");
 	link.innerHTML = "?";
-	link.href = "https://support.chaturbate.com/";
+	link.href = "https://igetboth.github.io/Token-Dollar-Converter/";
 	link.classList.add("moneycountinfo");
 	
 	document.getElementsByClassName("overflow")[0].style.overflow = "visible";

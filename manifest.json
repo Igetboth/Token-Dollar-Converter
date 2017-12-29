@@ -1,0 +1,24 @@
+{
+	"manifest_version": 2,
+	"name": "Chaturbate Token Converter",
+	"version": "1.4",
+	"description": "Adds calculated dollars next to token wallet on chaturbate.com",
+	
+	"icons": {
+		"48": "icons/Coin_48.png",
+		"96": "icons/Coin_96.png"
+	},
+	
+	"applications": {
+      "gecko": {
+         "id": "riley@sunshinesystems.com"
+      }
+   }, 
+
+	"content_scripts": [
+		{
+		  "matches": ["*://*.chaturbate.com/*"],
+		  "js": ["Token-Dollar-Min.js"]
+		}
+	]
+}

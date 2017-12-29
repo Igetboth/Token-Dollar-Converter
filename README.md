@@ -1,2 +1,3 @@
 # Token-Dollar-Converter
-Firefox Extension For use on chaturbate.com
+Multi-Platform Extension For chaturbate.com
+Firefox and Opera Compatible, Chrome and Safari In Development

@@ -7,11 +7,11 @@ function tokensToDollars() {
 	
 	var tokenDisplay = document.createElement("span");
 	tokenDisplay.classList.add("tokencount");
-	tokenDisplay.innerHTML = tokens + "&nbsp;Tkns";
+	tokenDisplay.textContent = tokens + " Tkns";
 	
 	var style = document.createElement("style");
 	style.type = 'text/css';
-	style.innerHTML = '.moneycount {margin: 0 0 0 2%; color: #C00;} .moneycountinfo {position: absolute; top: -39%; right: -6%; font-size: 1.1em !important;} .tokencountlink:hover {text-decoration: none !important;} .tokencount:hover {text-decoration: underline;}';
+	style.textContent = '.moneycount {margin: 0 0 0 2%; color: #C00;} .moneycountinfo {position: absolute; top: -39%; right: -6%; font-size: 1.1em !important;} .tokencountlink:hover {text-decoration: none !important;} .tokencount:hover {text-decoration: underline;}';
 	document.getElementsByTagName('head')[0].appendChild(style);
 	
 	var span = document.createElement("span");
@@ -22,16 +22,16 @@ function tokensToDollars() {
 	else {
 		displayValue = Math.ceil(value * 100) / 100;
 	};
-	span.innerHTML = span.innerHTML + "($" +  displayValue + ")";
+	span.textContent = span.textContent + "($" +  displayValue + ")";
 	
 	var link = document.createElement("a");
-	link.innerHTML = "?";
+	link.textContent = "?";
 	link.href = "https://igetboth.github.io/Token-Dollar-Converter/";
 	link.classList.add("moneycountinfo");
 	
 	document.getElementsByClassName("overflow")[0].style.overflow = "visible";
 	tokenCountLink.style.position = "relative";
-	tokenCountLink.innerHTML = "";
+	tokenCountLink.textContent = "";
 	tokenCountLink.appendChild(tokenDisplay);
 	tokenCountLink.appendChild(span);
 	span.appendChild(link);
@@ -40,13 +40,13 @@ tokensToDollars();
 var display = document.getElementsByClassName("tokencount")[0];
 var config = {childList:true, subtree:true};
 var callback = function(mutationsList) {
-    for(var mutation of mutationsList) {
-    	if (mutation.type == 'childList') {
+	for (var mutation of mutationsList) {
+		if (mutation.type == 'childList') {
 			tokensToDollars();
 			observer.disconnect();
 			observer.observe(document.getElementsByClassName("tokencount")[0], config);
-        };
-    };
+		};
+	};
 };
 var observer = new MutationObserver(callback);
 observer.observe(display, config);

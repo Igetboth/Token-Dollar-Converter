@@ -11,7 +11,7 @@ function tokensToDollars() {
 	
 	var style = document.createElement("style");
 	style.type = 'text/css';
-	style.innerHTML = '.moneycount {margin: 0 0 0 2%; color: #C00;} .moneycountinfo {position: absolute; top: -39%; right: -6%; font-size: 1.1em !important;}';
+	style.innerHTML = '.moneycount {margin: 0 0 0 2%; color: #C00;} .moneycountinfo {position: absolute; top: -39%; right: -6%; font-size: 1.1em !important;} .tokencountlink:hover {text-decoration: none !important;} .tokencount:hover {text-decoration: underline;}';
 	document.getElementsByTagName('head')[0].appendChild(style);
 	
 	var span = document.createElement("span");

@@ -26,6 +26,7 @@ function tokensToDollars() {
 	
 	var link = document.createElement("a");
 	link.textContent = "?";
+	link.setAttribute('target', '_blank');
 	link.href = "https://igetboth.github.io/Token-Dollar-Converter/";
 	link.classList.add("moneycountinfo");
 	

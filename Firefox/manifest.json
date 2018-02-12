@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "Chaturbate Token Converter",
-	"version": "1.6",
+	"version": "1.8",
 	"description": "Adds calculated dollars next to token wallet on chaturbate.com",
 	
 	"icons": {
